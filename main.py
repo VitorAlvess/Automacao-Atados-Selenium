@@ -15,7 +15,7 @@ class automacao:
             self.acesso = dados["access"]
             print('Dados do settings.json lidos com sucesso!')
         options = webdriver.ChromeOptions()
-        preferences = {"download.default_directory" : os.getcwd()}
+        preferences = {"download.default_directory" : os.getcwd(), 'profile.default_content_setting_values.automatic_downloads': 1}
         options.add_experimental_option("prefs", preferences)
         servico = Service(ChromeDriverManager().install())
         self.navegar = webdriver.Chrome(service=servico, chrome_options=options)
@@ -67,36 +67,18 @@ class automacao:
         print('Página da ONG PiPA')
         pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
         print('Total de vagas ativas: ')
-        pagina.find_element('xpath','//td[@class="pr-5"]//a//span').click() #Clica em gerenciar vagas
-        sleep(10)
-        pagina.find_element('xpath', '//*[@id="voluntarios"]/div[1]/div[3]/button').click()
-        pagina.find_element('xpath', '//*[@id="voluntarios"]/div[1]/div[2]/button').click()
-        print('Arquivos Baixados')
-
+        sleep(5) #Arrumar com delay do proprio webdriver
+        vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+        i = 0
         
-        # print(pagina.find_element('xpath','//td[@class="pr-5"]//a//span' ))
-        # vagas = pagina.find_elements('xpath','//td[@class="pr-5"]//a//span' ) #pegar todas vagas publicadas
-        # for vaga in vagas:
-        #     print(vaga.text)
-
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="03259417-073f-4cf5-99d2-cd6102832861")>
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="51e41fff-dfb6-491c-9392-42fd6d2f869e")>
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="6744f985-947e-4da3-8b54-ce2e87edae86")>
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="41bb6a01-4444-49b0-8727-9a61bdc729b2")>
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="57094919-c292-48b9-9fa8-bc140895b972")>
-# <selenium.webdriver.remote.webelement.WebElement (session="38ce6453ffaa984705c4b3c7eddd1bd1", element="7de5ff35-b1a9-415c-8eb8-c5afaa91ff2c")>
-        
-
-
-
-
-
-
-
-
-
-
-        sleep(100)
+        while i < len(vagas):
+            vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+            vagasdentro[i].click()
+            sleep(5)
+            pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
+            sleep(5)
+            i = i + 1
+        sleep(3)
     
 
 start = automacao()
