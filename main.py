@@ -1,7 +1,10 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from time import sleep
 import json
 import os
@@ -28,7 +31,6 @@ class automacao:
         pagina = self.navegar
 
         pagina.get('https://www.atados.com.br/ong/pipa')
-        pagina.maximize_window() #provavelmente tirar isso depois para passar para o servidor
         pagina.find_element('xpath',' //*[@id="toolbar-auth-button"]' ).click()
         if self.acesso == 'mail':
             print('Metodo de login: mail')
@@ -41,14 +43,12 @@ class automacao:
             pagina.find_element('xpath','/html/body/reach-portal/div[3]/div/div/div/div/div[1]/div/button[3]' ).click()
             sleep(5)
             sleep(5)
-
             wids = pagina.window_handles
             for window in wids:
                 pagina.switch_to.window(window)
                 if 'google' in pagina.current_url:
                     print("Trocando para a página de login do google")
                     break
-                    
             pagina.find_element('xpath','//*[@id="identifierId"]' ).send_keys(self.email)
             pagina.find_element('xpath',' //*[@id="identifierNext"]' ).click()
             print('cliquei em next')
@@ -63,23 +63,41 @@ class automacao:
                     break
         else:
             print('Por favor Insira no arquivo settings.json uma configuração de access de "mail" ou "google" ')
+
         print('Login Realizado com sucesso!')
         print('Página da ONG PiPA')
         pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
-        print('Total de vagas ativas: ')
         sleep(5) #Arrumar com delay do proprio webdriver
         vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+        print(f'Total de vagas ativas: {len(vagas)}')
         i = 0
         
         while i < len(vagas):
-            vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
-            vagasdentro[i].click()
-            sleep(5)
-            pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
-            sleep(5)
+            vaga = pagina.find_elements('xpath','//td[@class="pl-5"]//a')
+            print(vaga[i].text)
+            # print(i, len(vagas))
+            # vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+            # print(vagasdentro[i].text)
+            # vagasdentro[i].click()
+            # sleep(10)
+            # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
+            # sleep(10)
             i = i + 1
-        sleep(3)
+        sleep(5)
     
 
 start = automacao()
 start.iniciar()
+
+
+  # Dentro da página
+            # try:
+            #     # element = WebDriverWait(pagina, 60).until(
+            #     #     EC.presence_of_element_located((By.XPATH, '//*[@id="voluntarios"]/div[1]/div[2]/button'))
+            #     #     ) testar isso
+                  
+                
+            # except:
+            #     print('não tem')
+
+
