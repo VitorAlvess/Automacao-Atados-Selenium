@@ -1,10 +1,7 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 import json
 import os
@@ -29,7 +26,7 @@ class automacao:
 
     def atados(self):
         pagina = self.navegar
-
+        pagina.maximize_window()
         pagina.get('https://www.atados.com.br/ong/pipa')
         pagina.find_element('xpath',' //*[@id="toolbar-auth-button"]' ).click()
         if self.acesso == 'mail':
@@ -69,19 +66,19 @@ class automacao:
         pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
         sleep(5) #Arrumar com delay do proprio webdriver
         vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+        
+        #Listar vagas
         print(f'Total de vagas ativas: {len(vagas)}')
         i = 0
-        
-        while i < len(vagas):
-            vaga = pagina.find_elements('xpath','//td[@class="pl-5"]//a')
-            print(vaga[i].text)
-            # print(i, len(vagas))
-            # vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
-            # print(vagasdentro[i].text)
-            # vagasdentro[i].click()
-            # sleep(10)
-            # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
-            # sleep(10)
+        while i < len(vagas): 
+            sleep(5)
+            vaga_nome = pagina.find_elements('xpath','//td[@class="pl-5"]//a')
+            print(vaga_nome[i].text)
+            vaga = pagina.find_elements('xpath', '//td[@class="pr-5"]//a[@class="btn bg-primary-500 text-white hover:bg-primary-600 hover:text-white px-3 rounded-full"]')
+            vaga[i].click()
+            sleep(10)
+            pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
+            sleep(10)
             i = i + 1
         sleep(5)
     
@@ -89,6 +86,13 @@ class automacao:
 start = automacao()
 start.iniciar()
 
+ # print(i, len(vagas))
+            # vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+            # print(vagasdentro[i].text)
+            # vagasdentro[i].click()
+            # sleep(10)
+            # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
+            # sleep(10)
 
   # Dentro da página
             # try:
