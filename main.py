@@ -86,7 +86,7 @@ class automacao:
 start = automacao()
 start.iniciar()
 
- # print(i, len(vagas))
+ # print(i,len(vagas))
             # vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
             # print(vagasdentro[i].text)
             # vagasdentro[i].click()
