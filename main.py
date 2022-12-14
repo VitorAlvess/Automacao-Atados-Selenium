@@ -15,7 +15,7 @@ class automacao:
             self.acesso = dados["access"]
             print('Dados do settings.json lidos com sucesso!')
         options = webdriver.ChromeOptions()
-        preferences = {"download.default_directory" : os.getcwd(), 'profile.default_content_setting_values.automatic_downloads': 1}
+        preferences = {"download.default_directory" : os.getcwd()+ '/Relatorios', 'profile.default_content_setting_values.automatic_downloads': 1}
         options.add_experimental_option("prefs", preferences)
         servico = Service(ChromeDriverManager().install())
         self.navegar = webdriver.Chrome(service=servico, chrome_options=options)
@@ -63,7 +63,9 @@ class automacao:
 
         print('Login Realizado com sucesso!')
         print('Página da ONG PiPA')
-        pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
+        # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=') versão correta que vai mostrar vagas ativas é essa
+        pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=true&query=')
+
         sleep(5) #Arrumar com delay do proprio webdriver
         vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
         
@@ -71,37 +73,21 @@ class automacao:
         print(f'Total de vagas ativas: {len(vagas)}')
         i = 0
         while i < len(vagas): 
+            pagina.execute_script("document.body.style.zoom='33%'")
             sleep(5)
             vaga_nome = pagina.find_elements('xpath','//td[@class="pl-5"]//a')
             print(vaga_nome[i].text)
             vaga = pagina.find_elements('xpath', '//td[@class="pr-5"]//a[@class="btn bg-primary-500 text-white hover:bg-primary-600 hover:text-white px-3 rounded-full"]')
             vaga[i].click()
             sleep(10)
-            pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
-            sleep(10)
+            # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=') versão correta que vai mostrar vagas ativas é essa
+            pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=true&query=')
+
+            sleep(4)
             i = i + 1
         sleep(5)
     
 
 start = automacao()
 start.iniciar()
-
- # print(i,len(vagas))
-            # vagasdentro = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
-            # print(vagasdentro[i].text)
-            # vagasdentro[i].click()
-            # sleep(10)
-            # pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
-            # sleep(10)
-
-  # Dentro da página
-            # try:
-            #     # element = WebDriverWait(pagina, 60).until(
-            #     #     EC.presence_of_element_located((By.XPATH, '//*[@id="voluntarios"]/div[1]/div[2]/button'))
-            #     #     ) testar isso
-                  
-                
-            # except:
-            #     print('não tem')
-
 
