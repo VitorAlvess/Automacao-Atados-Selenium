@@ -4,3 +4,6 @@ test.py
 settings_pessoal.json
 *.xls
 *.xlsx
+token.json
+credentials.json
+manipulacao.py
