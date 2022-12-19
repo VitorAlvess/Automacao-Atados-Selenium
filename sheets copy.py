@@ -45,6 +45,7 @@ try:
             workbook = xlrd.open_workbook('relatorios/voluntarios.xls') #Use o nome do seu arquivo
         else:
             workbook = xlrd.open_workbook(f'relatorios/voluntarios ({i}).xls') #Use o nome do seu arquivo
+        print (i)
         worksheet = workbook.sheet_by_name('Usuários Inscritos') #Use o nome da aba do seu arquivo
         worksheet = workbook.sheet_by_index(0)
 
@@ -58,9 +59,26 @@ try:
                     valores_adicionar.append(valor) # Insere os valores na lista
                 
                 print(valores_adicionar)
-                result = sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+
+                result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                    range=SAMPLE_RANGE_NAME).execute()
+                valores = result['values']
+                for linha_sheets in range(len(valores)):
+                    print(linha_sheets)
+                    valores[linha_sheets].pop(0)
+                    if valores[linha_sheets] == valores_adicionar:
+                        break
+                    else:
+                        sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                     range=SAMPLE_RANGE_NAME, valueInputOption="RAW", body={'values': [valores_adicionar]}).execute()
-                sleep(2)
+                        sleep(1.5)
+
+
+
+
+
+
+               
                 valores_adicionar = []
                
 
