@@ -10,7 +10,8 @@
 
 
 import xlrd
-lista = []  # Cria a lista vazia
+valores_adicionar = []  # Cria a valores_adicionar vazia
+todos_valoes = []
 workbook = xlrd.open_workbook('relatorios/voluntarios.xls') #Use o nome do seu arquivo
 worksheet = workbook.sheet_by_name('Usuários Inscritos') #Use o nome da aba do seu arquivo
 worksheet = workbook.sheet_by_index(0)
@@ -30,10 +31,14 @@ for i in range(20):
         else:
             for colunas in range(worksheet.ncols): 
                 valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
-                lista.append(valor) # Insere os valores na lista
-            print(lista)
-            lista = []
+                valores_adicionar.append(valor) # Insere os valores na lista
+            print(valores_adicionar)
+            todos_valoes.append(valores_adicionar)
+            valores_adicionar = []
             numerar = numerar + 1
             print(numerar)
     print('Subindor para o sheets')
 
+
+
+print(todos_valoes)
