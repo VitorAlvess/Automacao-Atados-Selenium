@@ -11,7 +11,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1bX9c3wwYmEH-1MvjATTBzZjOZyFuLW90DCGiVY9xOkE'
-SAMPLE_RANGE_NAME = 'dados!A:J'
+SAMPLE_RANGE_NAME = 'dados!A:I'
 creds = None
 valores_final = []
 valor = []
@@ -63,9 +63,9 @@ try:
             else:
                 valores_total.append(valores_adicionar)
                 valores_adicionar = []
-    for i in range(len(valores)):
+    # for i in range(len(valores)):
         
-        valores[i].pop(0)       
+    #     valores[i].pop(0)       
     for i in range(len(valores_total)): #Passar os valores que não estão no google sheet
         if valores_total[i] not in valores:
             valores_final.append(valores_total[i])
