@@ -1,48 +1,29 @@
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-import csv
-import os
-import xlrd
-# If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
-# The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1g6gY-WqF3e_d2JUm3AJ0ykFgoKKnYPU52XfFdgmkv-U'
-SAMPLE_RANGE_NAME = 'dados!A:J'
-creds = None
-valores_final = []
-if os.path.exists('token.json'): #necessario pegar esse token la da api do google sheets
-    creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-# If there are no (valid) credentials available, let the user log in.
-if not creds or not creds.valid:
-    if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-    else:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            'credentials.json', SCOPES)
-        creds = flow.run_local_server(port=0)
-    # Save the credentials for the next run
-    with open('token.json', 'w') as token:
-        token.write(creds.to_json())
-
-try:
-    service = build('sheets', 'v4', credentials=creds)
-    #Passar valores existentes para a variavel valore
-    sheet = service.spreadsheets()
+valores_final = [['Danilo Figueiredo da Costaa', 'dci.infoseg@gmail.com', '(11) 95288-4737', '10/07/2022 21:19:41 +0000', 'Expert em Notebook', 'unapplied-by-deactivation', 'Instituo Center Norte', '07/04/1979', 'São Paulo, SP, Brasil'], ['Miriam Aharonovitss', 'miriam.aharonovitz@gmail.com', '(11) 97280-4493', '14/05/2022 01:36:18 +0000', 'Professor(a) de Gramática', 'confirmed-volunteer', 'Atados', '21/01/1991', 'São Paulo, SP, Brasil'], ['', '', '', '', '', '', '', '', '']]
 
 
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                    range=SAMPLE_RANGE_NAME).execute()
-    valores = result['values']
-    print(len(valores))
-    valores_final = [['valores', 'Uau']]
-    
-    for i in range(len(valores)):
-        print(i)
-    # sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-    #                                     range=f'dados!C4:J', valueInputOption="RAW", body={'values': valores_final}).execute()        
-except HttpError as err:
-        print(err)
+import pandas as pd
+
+
+nomes = []
+emails = []
+telefones = []
+cargos = []
+aniversarios = []
+
+for nome,email,telefone,_,cargo,_,_,birthday,_ in valores_final:
+    if nome != '':
+        nomes.append(nome)
+        emails.append(email)
+        telefones.append(telefone)
+        cargos.append(cargo)
+        aniversarios.append(birthday)
+
+print(nomes, email, telefone, cargos, aniversarios)
+
+  
+
+info = {"Name": nomes, "Given Name": nomes,"Additional Name": "",	"Family Name": "",	"Yomi Name": "","Given Name Yomi": "",	"Additional Name Yomi": "","Family Name Yomi": "",	"Name Prefix": "",	"Name Suffix": "",	"Initials": "",	"Nickname": '',	"Short Name": '',	"Maiden Name": '',	"Birthday": aniversarios,	"Gender": '', "Location": '',	"Billing Information": '',	"Directory Server": '',	"Mileage": '',	"Occupation": '',	"Hobby": '',	"Sensitivity": '',	"Priority": '',	"Subject": '',	"Notes": '',	"Language": '',	"Photo": '',	"Group Membership": '* myContacts',	"E-mail 1 - Type": '*',	"E-mail 1 - Value": email,	"Phone 1 - Type": '',	"Phone 1 - Value": telefones,	"Organization 1 - Type": '',	"Organization 1 - Name": '',	"Organization 1 - Yomi Name": '',	"Organization 1 - Title": cargos, 	"Organization 1 - Department": '',	"Organization 1 - Symbol": '',"Organization 1 - Location": '',	"Organization 1 - Job Description": ''}
+df = pd.DataFrame(info)
+
+df.to_csv('demo.csv')
+

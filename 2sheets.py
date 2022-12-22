@@ -72,5 +72,6 @@ try:
 
     sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                         range=SAMPLE_RANGE_NAME, valueInputOption="RAW", body={'values': valores_final}).execute()        
+    print(valores_final)
 except HttpError as err:
         print(err)
