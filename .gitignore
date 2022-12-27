@@ -6,3 +6,5 @@ settings_pessoal.json
 *.xlsx
 token.json
 credentials.json
+contatos.csv
+token2.json

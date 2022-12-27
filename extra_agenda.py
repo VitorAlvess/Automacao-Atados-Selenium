@@ -25,5 +25,4 @@ print(nomes, email, telefone, cargos, aniversarios)
 info = {"Name": nomes, "Given Name": nomes,"Additional Name": "",	"Family Name": "",	"Yomi Name": "","Given Name Yomi": "",	"Additional Name Yomi": "","Family Name Yomi": "",	"Name Prefix": "",	"Name Suffix": "",	"Initials": "",	"Nickname": '',	"Short Name": '',	"Maiden Name": '',	"Birthday": aniversarios,	"Gender": '', "Location": '',	"Billing Information": '',	"Directory Server": '',	"Mileage": '',	"Occupation": '',	"Hobby": '',	"Sensitivity": '',	"Priority": '',	"Subject": '',	"Notes": '',	"Language": '',	"Photo": '',	"Group Membership": '* myContacts',	"E-mail 1 - Type": '*',	"E-mail 1 - Value": email,	"Phone 1 - Type": '',	"Phone 1 - Value": telefones,	"Organization 1 - Type": '',	"Organization 1 - Name": '',	"Organization 1 - Yomi Name": '',	"Organization 1 - Title": cargos, 	"Organization 1 - Department": '',	"Organization 1 - Symbol": '',"Organization 1 - Location": '',	"Organization 1 - Job Description": ''}
 df = pd.DataFrame(info)
 
-df.to_csv('demo.csv')
-
+df.to_csv('contatos.csv')

@@ -42,7 +42,7 @@ try:
     # Pegar os dados das planilhas voluntarios
     valores_adicionar = []
     valores_total = []
-    for i in range(20): # Total de planilhas
+    for i in range(20): # Total de planilhas / Range vai ser definido pelo numero total de vagas ativas
         if i == 0:
             workbook = xlrd.open_workbook('relatorios/voluntarios.xls') #A 0 é especial 
         else:
@@ -62,16 +62,13 @@ try:
                 pass
             else:
                 valores_total.append(valores_adicionar)
-                valores_adicionar = []
-    # for i in range(len(valores)):
-        
-    #     valores[i].pop(0)       
+                valores_adicionar = []    
     for i in range(len(valores_total)): #Passar os valores que não estão no google sheet
         if valores_total[i] not in valores:
             valores_final.append(valores_total[i])
 
     sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                         range=SAMPLE_RANGE_NAME, valueInputOption="RAW", body={'values': valores_final}).execute()        
-    print(valores_final)
+    print(valores_final) #Valores finais.
 except HttpError as err:
         print(err)
