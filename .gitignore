@@ -1,0 +1,10 @@
+/env
+notas
+test.py
+settings_pessoal.json
+*.xls
+*.xlsx
+token.json
+credentials.json
+contatos.csv
+token2.json

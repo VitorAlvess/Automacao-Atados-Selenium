@@ -1,0 +1,6 @@
+{
+    "email": "email",
+    "password": "senha",
+    "access": "mail or google",
+    "token": "token"
+}
