@@ -6,12 +6,31 @@ from time import sleep
 import json
 import os
 
+# parte 2
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+import csv
+import xlrd
+
+#parte 3
+import os.path
+
+
+# If modifying these scopes, delete the file token.json.
+
 class scrappy:
     def iniciar(self):
-        self.configuracoes()
+        self.configuracoes_atados()
         self.logar()
         self.pagina_opipa()
-    def configuracoes(self):
+        self.configuracoes_sheets()
+        self.sheets()
+        self.people_api()
+        self.apagar_arquivos()
+    def configuracoes_atados(self):
         with open("settings_pessoal.json", encoding='utf-8') as meu_json: # Importar dados de um arquivo config com usernames e passwords
             dados = json.load(meu_json)
             self.email = dados["email"]
@@ -72,12 +91,12 @@ class scrappy:
         pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
 
         sleep(5)
-        vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
+        self.vagas = pagina.find_elements('xpath','//td[@class="pl-5"]//a') #Clica em gerenciar vagas
 
         #Listar vagas
-        print(f'Total de vagas ativas: {len(vagas)}')
+        print(f'Total de vagas ativas: {len(self.vagas)}')
         i = 0
-        while i < len(vagas): 
+        while i < len(self.vagas): 
             
             sleep(5)
             vaga_nome = pagina.find_elements('xpath','//td[@class="pl-5"]//a')
@@ -106,6 +125,148 @@ class scrappy:
             sleep(4)
             i = i + 1
         sleep(5)
+
+    def configuracoes_sheets(self):
+        # If modifying these scopes, delete the file token.json.
+        SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
+        self.creds = None
+       
+        if os.path.exists('token.json'): #necessario pegar esse token la da api do google sheets
+           self.creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+        # If there are no (valid) credentials available, let the user log in.
+        if not self.creds or not self.creds.valid:
+            if self.creds and self.creds.expired and self.creds.refresh_token:
+                self.creds.refresh(Request())
+            else:
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    'credentials.json', SCOPES)
+                self.creds = flow.run_local_server(port=0)
+            # Save the credentials for the next run
+            with open('token.json', 'w') as token:
+                token.write(self.creds.to_json())
+        
+    def sheets(self):
+         # The ID and range of a sample spreadsheet.
+        SAMPLE_SPREADSHEET_ID = '1bX9c3wwYmEH-1MvjATTBzZjOZyFuLW90DCGiVY9xOkE'
+        SAMPLE_RANGE_NAME = 'dados!A:I'
+       
+        valores_final = []
+        valor = []
+        try:
+            service = build('sheets', 'v4', credentials=self.creds)
+            #Passar valores existentes para a variavel valore
+            sheet = service.spreadsheets()
+
+
+            result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                            range=SAMPLE_RANGE_NAME).execute()
+            valores = result['values']
+
+            # Pegar os dados das planilhas voluntarios
+            valores_adicionar = []
+            valores_total = []
+            for i in range(len(self.vagas)): # Total de planilhas / Range vai ser definido pelo numero total de vagas ativas
+                if i == 0:
+                    workbook = xlrd.open_workbook('relatorios/voluntarios.xls') #A 0 é especial 
+                else:
+                    workbook = xlrd.open_workbook(f'relatorios/voluntarios ({i}).xls') #Looping até 19
+                worksheet = workbook.sheet_by_name('Usuários Inscritos') #Nome da aba
+                worksheet = workbook.sheet_by_index(0)
+
+
+                for linhas in range(worksheet.nrows): 
+                    if linhas == 0:
+                        pass
+                    else:
+                        for colunas in range(worksheet.ncols): 
+                            valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                            valores_adicionar.append(valor) # Insere os valores na lista
+                    if valores_adicionar == []:
+                        pass
+                    else:
+                        valores_total.append(valores_adicionar)
+                        valores_adicionar = []    
+            for i in range(len(valores_total)): #Passar os valores que não estão no google sheet
+                if valores_total[i] not in valores:
+                    valores_final.append(valores_total[i])
+
+            sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                                range=SAMPLE_RANGE_NAME, valueInputOption="RAW", body={'values': valores_final}).execute()        
+            print(valores_final) #Valores finais.
+            self.valores_final = valores_final
+        except HttpError as err:
+                print(err)
+
+    def apagar_arquivos(self):
+        pasta = 'relatorios'  # substitua pelo caminho para a pasta que você quer apagar
+        # Itera sobre todos os arquivos na pasta e remove cada um
+        for nome_arquivo in os.listdir(pasta):
+            caminho_arquivo = os.path.join(pasta, nome_arquivo)
+            if os.path.isfile(caminho_arquivo):
+                os.remove(caminho_arquivo)
+    
+    def people_api(self):
+        SCOPES = ['https://www.googleapis.com/auth/contacts']
+        """Shows basic usage of the People API.
+        Prints the name of the first 10 connections.
+        """
+        creds = None
+        # The file token.json stores the user's access and refresh tokens, and is
+        # created automatically when the authorization flow completes for the first
+        # time.
+        if os.path.exists('token2.json'):
+            creds = Credentials.from_authorized_user_file('token2.json', SCOPES)
+        # If there are no (valid) credentials available, let the user log in.
+        if not creds or not creds.valid:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    'credentials.json', SCOPES)
+                creds = flow.run_local_server(port=0)
+            # Save the credentials for the next run
+            with open('token2.json', 'w') as token:
+                token.write(creds.to_json())
+
+        try:
+            #Valores que vão ser recebidos de outro arquivo
+            service = build('people', 'v1', credentials=creds)
+
+            #Criar contato
+            for valores in self.valores_final:
+                if valores[0] == '':
+                    break
+                contact = service.people().createContact(
+                    body={
+                    "names": [
+                        {
+                        "givenName": valores[0],
+                        'familyName': ''
+                        }
+                    ],
+                    "emailAddresses": [
+                        {
+                        "value": valores[1],
+                        "type": "work"
+                        }
+                    ],
+                    "phoneNumbers": [
+                        {
+                        "value": valores[2],
+                        "type": "mobile"
+                        }
+                    ],
+                    "organizations": [
+                        {
+                        "name": "",
+                        "title": valores[4]
+                        }
+                    ]
+                    }
+                ).execute()
+        except HttpError as err:
+            print(err)
+
 
 start = scrappy()
 start.iniciar()
