@@ -19,8 +19,6 @@ import xlrd
 import os.path
 
 
-# If modifying these scopes, delete the file token.json.
-
 class scrappy:
     def iniciar(self):
         self.configuracoes_atados()
@@ -30,23 +28,36 @@ class scrappy:
         self.sheets()
         self.people_api()
         self.apagar_arquivos()
+    
     def configuracoes_atados(self):
         with open("settings_pessoal.json", encoding='utf-8') as meu_json: # Importar dados de um arquivo config com usernames e passwords
             dados = json.load(meu_json)
             self.email = dados["email"]
             self.senha = dados["password"]
             self.acesso = dados["access"]
+            self.email_contacts = ["email_contacts"]
+            self.password_contacts = ["password_contacts"]
             print('Dados do settings.json lidos com sucesso!')
         options = webdriver.ChromeOptions()
+        # options.add_argument('--disable-gpu')
+        # options.add_argument('--headless')
+        options.add_argument('--window-size=1920,1080')
+        # options.add_argument('--no-sandbox')
+        # options.add_argument('--start-maximized')
+        # options.add_argument('--disable-setuid-sandbox')
+
+
+
+
         preferences = {"download.default_directory" : f'{os.getcwd()}\\relatorios', 'profile.default_content_setting_values.automatic_downloads': 1}
         options.add_experimental_option("prefs", preferences)
         servico = Service(ChromeDriverManager().install())
-        self.navegar = webdriver.Chrome(service=servico, chrome_options=options)
-
+        self.navegar = webdriver.Chrome(service=servico, options=options)
+        print('Passou aqui')
     def logar(self):
 
         pagina = self.navegar
-        pagina.maximize_window()
+        pagina.set_window_size(1366,768)
         pagina.get('https://www.atados.com.br/ong/pipa')
         pagina.find_element('xpath',' //*[@id="toolbar-auth-button"]' ).click()
 
@@ -58,30 +69,36 @@ class scrappy:
             pagina.find_element('xpath',' /html/body/reach-portal/div[3]/div/div/div/form/div/button' ).click()
 
         elif self.acesso == 'google':  
-            print('Metodo de login: Google')
-            pagina.find_element('xpath','/html/body/reach-portal/div[3]/div/div/div/div/div[1]/div/button[3]' ).click()
-            sleep(5)
-            sleep(5)
-            wids = pagina.window_handles
-            for window in wids:
-                pagina.switch_to.window(window)
-                if 'google' in pagina.current_url:
-                    print("Trocando para a página de login do google")
-                    break
-            pagina.find_element('xpath','//*[@id="identifierId"]' ).send_keys(self.email)
-            pagina.find_element('xpath',' //*[@id="identifierNext"]' ).click()
-            print('cliquei em next')
-            sleep(5)
-            pagina.find_element('xpath','//*[@id="password"]/div[1]/div/div[1]/input' ).send_keys(self.senha)
-            pagina.find_element('xpath','//*[@id="passwordNext"]' ).click()
-            sleep(5)
-            for window in wids:
-                pagina.switch_to.window(window)
-                if 'atados' in pagina.current_url:
-                    print('Voltando para a página do Atados')
-                    break
+            print('Metodo de login: Google não está funcionando')
+            # pagina.find_element('xpath','/html/body/reach-portal/div[3]/div/div/div/div/div[1]/div/button[3]' ).click()
+            # sleep(5)
+            
+            # wids = pagina.window_handles
+            # for window in wids:
+            #     pagina.switch_to.window(window)
+            #     if 'google' in pagina.current_url:
+            #         print("Trocando para a página de login do google")
+            #         sleep(5)
+            #         break
+            # pagina.find_element('xpath','//*[@id="Email"]' ).send_keys(self.email)
+            # pagina.find_element('xpath',' //*[@id="next"]' ).click()
+            # print('cliquei em next')
+            # sleep(5)
+            # pagina.find_element('xpath','//*[@id="password"]' ).send_keys(self.senha)
+            # login = pagina.find_elements('xpath','//div/button' )
+            # sleep(5)
+            # print(login)
+            # login[2].click()
+            # # pagina.find_element('xpath','//*[@id="signIn"]').click()
+            # sleep(5)
+            # for window in wids:
+            #     pagina.switch_to.window(window)
+            #     if 'atados' in pagina.current_url:
+            #         print('Voltando para a página do Atados')
+            #         break
         else:
             print('Por favor Insira no arquivo settings.json uma configuração de access de "mail" ou "google" ')
+        sleep(5)
         print('Login Realizado com sucesso!')
     
     def pagina_opipa(self):
