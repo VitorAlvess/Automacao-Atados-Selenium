@@ -1,6 +1,17 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager para usar o chrome 
+# from selenium.webdriver.chrome.service import Service
+
+
+#FIrefox
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from webdriver_manager.firefox import GeckoDriverManager
+
+
+
+
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep 
 import json
@@ -38,21 +49,39 @@ class scrappy:
             self.email_contacts = ["email_contacts"]
             self.password_contacts = ["password_contacts"]
             print('Dados do settings.json lidos com sucesso!')
-        options = webdriver.ChromeOptions()
-        # options.add_argument('--disable-gpu')
-        # options.add_argument('--headless')
+
+        firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
+        firefox_capabilities['acceptInsecureCerts'] = True
+
+
+        options = FirefoxOptions()
+
+        firefox_profile = webdriver.FirefoxProfile()
+        firefox_profile.set_preference("browser.download.folderList", 2) # use 2 para usar o diretório personalizado
+        firefox_profile.set_preference("browser.download.dir", f'{os.getcwd()}\\relatorios') # substitua pelo caminho para o seu diretório
+
+
+        options.add_argument('--disable-gpu')
+        options.add_argument('--headless')
         options.add_argument('--window-size=1920,1080')
-        # options.add_argument('--no-sandbox')
-        # options.add_argument('--start-maximized')
-        # options.add_argument('--disable-setuid-sandbox')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--start-maximized')
+        options.add_argument('--disable-setuid-sandbox')
+     
 
 
 
 
-        preferences = {"download.default_directory" : f'{os.getcwd()}\\relatorios', 'profile.default_content_setting_values.automatic_downloads': 1}
-        options.add_experimental_option("prefs", preferences)
-        servico = Service(ChromeDriverManager().install())
-        self.navegar = webdriver.Chrome(service=servico, options=options)
+        # preferences = {"download.default_directory" : f'{os.getcwd()}\\relatorios', 'profile.default_content_setting_values.automatic_downloads': 1}
+        # options.add_argument("prefs", preferences)
+        # servico = Service(ChromeDriverManager().install())
+   
+
+        # self.navegar = webdriver.Chrome(service=servico, options=options)
+        self.navegar = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options, capabilities=firefox_capabilities, firefox_profile=firefox_profile)
+
+        # self.navegar = webdriver.Chrome(service=servico, options=options)
+
         print('Passou aqui')
     def logar(self):
 
@@ -186,7 +215,7 @@ class scrappy:
                 if i == 0:
                     workbook = xlrd.open_workbook('relatorios/voluntarios.xls') #A 0 é especial 
                 else:
-                    workbook = xlrd.open_workbook(f'relatorios/voluntarios ({i}).xls') #Looping até 19
+                    workbook = xlrd.open_workbook(f'relatorios/voluntarios({i}).xls') 
                 worksheet = workbook.sheet_by_name('Usuários Inscritos') #Nome da aba
                 worksheet = workbook.sheet_by_index(0)
 

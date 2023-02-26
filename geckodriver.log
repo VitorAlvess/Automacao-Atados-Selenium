@@ -1,0 +1,96 @@
+1677428171646	geckodriver	INFO	Listening on 127.0.0.1:60346
+1677428174734	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileARYX9x"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677428175156	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677428175163	Marionette	INFO	Listening on port 60354
+Read port: 60354
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:60347
+1677428175291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileARYX9x\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:60347/devtools/browser/9cc03afb-0c0d-4319-bc17-d2ee3b9ac51d
+1677428193899	geckodriver	INFO	Listening on 127.0.0.1:60388
+1677428196974	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 9" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofiletGaWtF"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677428197280	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677428197285	Marionette	INFO	Listening on port 60396
+Read port: 60396
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:60389
+1677428197404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofiletGaWtF\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:60389/devtools/browser/ed7d9aa6-d9b9-44bb-bece-69f5ea5bd5c7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677428230863	geckodriver	INFO	Listening on 127.0.0.1:60479
+1677428233938	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile8VIq1Q"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677428234269	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677428234273	Marionette	INFO	Listening on port 60487
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:60480
+Read port: 60487
+1677428234546	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile8VIq1Q\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:60480/devtools/browser/00cd2bc3-cd8a-4347-9431-64fbb4f0b9f5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677428500303	geckodriver	INFO	Listening on 127.0.0.1:60596
+1677428503374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilexDtZFW"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677428503676	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677428503680	Marionette	INFO	Listening on port 60606
+Read port: 60606
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:60597
+1677428503792	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilexDtZFW\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:60597/devtools/browser/c955bce6-2cde-442e-bb55-0c883124d3d6
+1677428533523	geckodriver	INFO	Listening on 127.0.0.1:60647
+1677428536560	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileVKcovE"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677428536878	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677428536882	Marionette	INFO	Listening on port 60655
+Read port: 60655
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:60648
+1677428536997	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileVKcovE\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:60648/devtools/browser/61e21e66-f270-417c-b656-efecbe8c1d23
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
