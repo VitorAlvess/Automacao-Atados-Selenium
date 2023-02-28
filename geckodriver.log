@@ -94,3 +94,414 @@ console.error: ({})
 DevTools listening on ws://127.0.0.1:60648/devtools/browser/61e21e66-f270-417c-b656-efecbe8c1d23
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677433745663	geckodriver	INFO	Listening on 127.0.0.1:62029
+1677433748769	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilePRDSf9"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677433749123	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677433749127	Marionette	INFO	Listening on port 62039
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:62030
+Read port: 62039
+1677433749397	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilePRDSf9\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:62030/devtools/browser/d7612c40-f6f9-45cb-bfa9-e69cacf153e6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677434720349	geckodriver	INFO	Listening on 127.0.0.1:62300
+1677435414636	geckodriver	INFO	Listening on 127.0.0.1:63087
+1677435417706	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilex7K7ju"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677435418181	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677435418189	Marionette	INFO	Listening on port 63096
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:63088
+Read port: 63096
+1677435418470	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilex7K7ju\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:63088/devtools/browser/a657feef-2338-4425-a03d-d1ea4b006e0b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677617820463	geckodriver	INFO	Listening on 127.0.0.1:50258
+1677617823529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 9" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilebQGB6d"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677617824317	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677617824323	Marionette	INFO	Listening on port 50266
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:50259
+Read port: 50266
+1677617824594	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilebQGB6d\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50259/devtools/browser/e7ffa463-4623-46e3-89d3-36dfd5dddbbe
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677618026168	Marionette	INFO	Stopped listening on port 50266
+Dynamically enable window occlusion 1
+1677618132759	geckodriver	INFO	Listening on 127.0.0.1:50364
+1677618135787	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilej5fWM5"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677618136103	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677618136108	Marionette	INFO	Listening on port 50374
+Read port: 50374
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:50365
+1677618136223	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilej5fWM5\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50365/devtools/browser/42a27123-c25b-4e1a-801c-86312f712d96
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677618315893	Marionette	INFO	Stopped listening on port 50374
+Dynamically enable window occlusion 1
+1677618712866	geckodriver	INFO	Listening on 127.0.0.1:50490
+1677618715903	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 1" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile4n79bd"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677618716489	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677618716496	Marionette	INFO	Listening on port 50499
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+Read port: 50499
+WebDriver BiDi listening on ws://127.0.0.1:50491
+1677618716724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile4n79bd\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50491/devtools/browser/2f58219a-50fd-4ac9-b821-99dbc88556cb
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677618945777	geckodriver	INFO	Listening on 127.0.0.1:50604
+1677618948822	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileiJ77SA"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677618949245	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677618949251	Marionette	INFO	Listening on port 50613
+Read port: 50613
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:50605
+1677618949450	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileiJ77SA\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50605/devtools/browser/ed3063c7-c77d-486c-a129-ebd306824170
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677618981815	geckodriver	INFO	Listening on 127.0.0.1:50689
+1677618984844	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile88N2gR"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677618985306	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677618985312	Marionette	INFO	Listening on port 50698
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+Read port: 50698
+WebDriver BiDi listening on ws://127.0.0.1:50690
+1677618985481	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile88N2gR\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50690/devtools/browser/124acedc-392c-4633-aba7-de43bae59937
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677619189101	Marionette	INFO	Stopped listening on port 50698
+Dynamically enable window occlusion 1
+1677620815875	geckodriver	INFO	Listening on 127.0.0.1:50972
+1677620818934	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 3" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilebit5Oc"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677620819253	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677620819257	Marionette	INFO	Listening on port 50983
+Read port: 50983
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:50973
+1677620819376	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilebit5Oc\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50973/devtools/browser/8a5bbc75-24fe-4975-9ad9-78b0aa7965dc
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677621017755	Marionette	INFO	Stopped listening on port 50983
+Dynamically enable window occlusion 1
+1677621575184	geckodriver	INFO	Listening on 127.0.0.1:51233
+1677621578239	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 4" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileDqwT3D"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677621578708	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677621578714	Marionette	INFO	Listening on port 51243
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+Read port: 51243
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:51234
+1677621579028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileDqwT3D\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51234/devtools/browser/fe43be32-7c54-4a81-8037-4dd30d2f84d6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677621785479	Marionette	INFO	Stopped listening on port 51243
+Dynamically enable window occlusion 1
+1677622719600	geckodriver	INFO	Listening on 127.0.0.1:51689
+1677622722652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileJi8d0Z"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677622723351	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677622723357	Marionette	INFO	Listening on port 51698
+Read port: 51698
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:51690
+1677622723689	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileJi8d0Z\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51690/devtools/browser/9d1bfe5c-edd6-4ad8-aea6-a9264ee8b361
+JavaScript error: resource://gre/modules/SearchService.sys.mjs, line 1244: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 511: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]' when calling method: [nsISearchService::defaultEngine]
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+1677622741743	geckodriver	INFO	Listening on 127.0.0.1:51739
+1677622744807	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileS47Exz"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677622745168	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677622745173	Marionette	INFO	Listening on port 51747
+Read port: 51747
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:51740
+1677622745450	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileS47Exz\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51740/devtools/browser/2b70b269-db3b-4632-a653-c64ed4733269
+JavaScript error: resource://gre/modules/SearchService.sys.mjs, line 1244: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 511: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]' when calling method: [nsISearchService::defaultEngine]
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677622932354	Marionette	INFO	Stopped listening on port 51747
+Dynamically enable window occlusion 1
+1677624047990	geckodriver	INFO	Listening on 127.0.0.1:51925
+1677624051069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 6" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileQH87gS"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677624051399	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677624051404	Marionette	INFO	Listening on port 51935
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:51926
+Read port: 51935
+1677624051705	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofileQH87gS\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51926/devtools/browser/b5407447-cf80-41ec-ace4-b730c9cd1a50
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677624263052	Marionette	INFO	Stopped listening on port 51935
+Dynamically enable window occlusion 1
+1677624679481	geckodriver	INFO	Listening on 127.0.0.1:52889
+1677624682563	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilehaoMp1"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677624682988	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677624682995	Marionette	INFO	Listening on port 52899
+Read port: 52899
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:52890
+1677624683145	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofilehaoMp1\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:52890/devtools/browser/d73a28c5-df44-49da-995d-a655d321f7cf
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677624882766	Marionette	INFO	Stopped listening on port 52899
+Dynamically enable window occlusion 1
+1677624906551	geckodriver	INFO	Listening on 127.0.0.1:53033
+1677624909620	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 4" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile1buOD3"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677624910037	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677624910043	Marionette	INFO	Listening on port 53043
+Read port: 53043
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:53034
+1677624910191	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile1buOD3\\search.json.mozlz4", (void 0)))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:53034/devtools/browser/f05b8fb2-5057-440b-830f-bd4b043eb69d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677625091863	Marionette	INFO	Stopped listening on port 53043
+Dynamically enable window occlusion 1
+1677625378213	geckodriver	INFO	Listening on 127.0.0.1:53164
+1677625381247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-gpu" "--headless" "--window-size ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile8tUgcC"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677625381756	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677625381763	Marionette	INFO	Listening on port 53175
+Read port: 53175
+console.error: "Warning: unrecognized command line flag -disable-gpu\n"
+console.error: "Warning: unrecognized command line flag -no-sandbox\n"
+console.error: "Warning: unrecognized command line flag -disable-setuid-sandbox\n"
+WebDriver BiDi listening on ws://127.0.0.1:53165
+1677625381931	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vitor\\AppData\\Local\\Temp\\rust_mozprofile8tUgcC\\search.json.mozlz4", (void 0)))
+console.error: Region.sys.mjs: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 762))
+console.error: Region.sys.mjs: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.sys.mjs", 416))
+console.error: ({})
+DevTools listening on ws://127.0.0.1:53165/devtools/browser/0bf8522b-7fe3-4ba4-84f4-03607b6b7548
+JavaScript error: resource://gre/modules/SearchService.sys.mjs, line 1244: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 511: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+#ensureInitialized@resource://gre/modules/SearchService.sys.mjs:1244:15
+get defaultEngine@resource://gre/modules/SearchService.sys.mjs:168:28
+keywordToURI@resource://gre/modules/URIFixup.sys.mjs:511:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.sys.mjs:854:41
+keywordURIFixup@resource://gre/modules/URIFixup.sys.mjs:1040:12
+getFixupURIInfo@resource://gre/modules/URIFixup.sys.mjs:436:7
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.sys.mjs:156:35
+_ensureFormattedHostVisible/<@resource:///modules/UrlbarValueFormatter.sys.mjs:105:41
+" {file: "resource://gre/modules/SearchService.sys.mjs" line: 1244}]' when calling method: [nsISearchService::defaultEngine]
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.atados.com.br."
+1677625590927	Marionette	INFO	Stopped listening on port 53175
+Dynamically enable window occlusion 1

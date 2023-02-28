@@ -9,3 +9,6 @@ credentials.json
 contatos.csv
 token2.json
 geckodriver.log
+/dist
+/build
+/old

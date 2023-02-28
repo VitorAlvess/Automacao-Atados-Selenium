@@ -29,6 +29,7 @@ import xlrd
 #parte 3
 import os.path
 
+import sys
 
 class scrappy:
     def iniciar(self):
@@ -39,6 +40,7 @@ class scrappy:
         self.sheets()
         self.people_api()
         self.apagar_arquivos()
+        self.close()
     
     def configuracoes_atados(self):
         with open("settings_pessoal.json", encoding='utf-8') as meu_json: # Importar dados de um arquivo config com usernames e passwords
@@ -164,7 +166,7 @@ class scrappy:
                 pagina.find_element('xpath','//*[@id="voluntarios"]/div[1]/div[3]/button' ).click()
                 sleep(2)
             except:
-                print()
+                pass
                 
             pagina.get('https://www.atados.com.br/ong/pipa/gerenciar/vagas?closed=published&query=')
 
@@ -194,7 +196,7 @@ class scrappy:
     def sheets(self):
          # The ID and range of a sample spreadsheet.
         SAMPLE_SPREADSHEET_ID = '1bX9c3wwYmEH-1MvjATTBzZjOZyFuLW90DCGiVY9xOkE'
-        SAMPLE_RANGE_NAME = 'dados!A:I'
+        SAMPLE_RANGE_NAME = 'dados!A:G'
        
         valores_final = []
         valor = []
@@ -225,8 +227,27 @@ class scrappy:
                         pass
                     else:
                         for colunas in range(worksheet.ncols): 
-                            valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
-                            valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 0:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 1:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 2:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 3:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor.split()[0])
+                            if colunas == 4:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 7:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
+                            if colunas == 8:
+                                valor = worksheet.cell_value(linhas, colunas) # Pega os valores do excel
+                                valores_adicionar.append(valor) # Insere os valores na lista
                     if valores_adicionar == []:
                         pass
                     else:
@@ -313,6 +334,9 @@ class scrappy:
         except HttpError as err:
             print(err)
 
+    def close(self):
+        self.navegar.quit()
+        sys.exit()
 
 start = scrappy()
 start.iniciar()
